@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:push_notifications/config/router/app_router.dart';
 import 'package:push_notifications/config/theme/app_theme.dart';
 
 void main() {
@@ -10,14 +11,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: appRouter,
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: AppTheme().getTheme(),
-      home: Scaffold(
-        body: Center(
-          child: Text("Hola mundo"),
-        ),
-      )
     );
   }
 }
